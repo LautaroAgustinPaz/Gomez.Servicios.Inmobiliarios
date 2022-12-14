@@ -1,0 +1,40 @@
+.contact-section {
+    padding: 40px 15%;
+}
+
+.contact-form {
+    background: #F9F9F9;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 6rem;
+}
+
+.contact-form h1 {
+    font-size: 60px;
+    color: #2B3239;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.contact-img {
+    max-width: 100%;
+    width: 720px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-form > h1 > span {
+    color: #60A3D9;
+}
+
+.contact-form p {
+    color: #2B3239;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-top: 0%;
+}

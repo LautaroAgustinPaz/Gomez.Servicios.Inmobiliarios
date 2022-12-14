@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@600&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /* -----> GENERAL */
+* {
+  padding: 0%; /* Reseteo */
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+ul, li, a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* -----> HEADER */
+.navbarHeaderGeneral {
+  font-family: "Alexandria", sans-serif;
+  padding: 10px;
+  font-size: 14px;
+}
+.navbarHeaderGeneral .menuDropSeccionesPropiedadesNav {
+  font-size: 14px;
+}
+
+.contact-section {
+  padding: 40px 15%;
+}
+
+.contact-form {
+  background: #F9F9F9;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 6rem;
+}
+
+.contact-form h1 {
+  font-size: 60px;
+  color: #2B3239;
+  margin-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.contact-img {
+  max-width: 100%;
+  width: 720px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contact-form > h1 > span {
+  color: #60A3D9;
+}
+
+.contact-form p {
+  color: #2B3239;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-size: 1.1rem;
+  margin-top: 0%;
+}
+
+/* -----> FOOTER */
+footer {
+  display: flex;
+  background-color: #2B3239; /* PADRE */
+  padding: 30px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  font-family: "Raleway", sans-serif;
+  justify-content: center;
+}
+
+/* -----> PARTE 1 */
+.footerP1 {
+  display: flex;
+  flex-direction: column; /* HIJO 1 */
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.footerImgLogo {
+  width: 90px;
+  height: 80px;
+  padding-bottom: 30px;
+}
+
+.buttonFooter {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.Copyrigh {
+  color: #ffffff;
+  padding-top: 15px;
+  font-size: 10px;
+}
+
+/* -----> PARTE 2 */
+.ColumnaFooterColumna1 {
+  display: flex;
+  background-color: rgb(255, 255, 255); /* HIJO: 1 */
+  border-radius: 25%;
+  width: 3px;
+  height: 100%;
+  margin-left: 150px;
+}
+
+.footerP2 {
+  display: flex; /* PADRE */
+  margin-right: 100px;
+}
+
+ul.UL__NavFooter--Modificado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none; /* HIJO: 2*/
+  text-decoration: none;
+  font-family: "Alexandria", sans-serif;
+  margin-left: 0px;
+}
+
+/* -----> PARTE 3 */
+.ColumnaFooterColumna2 {
+  display: flex;
+  background-color: rgb(255, 255, 255); /* HIJO: 1 */
+  border-radius: 25%;
+  width: 3px;
+  height: 100%;
+  margin-left: 100px;
+}
+
+.footerP3 {
+  display: flex;
+  margin-right: 50px;
+}
+
+.redesSociales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 49px;
+}
+
+/* -----> FOOTER GENERAL - GRIDS - FLEXBOX - MEDIA QUERYS */
+.footerGrids {
+  display: grid;
+  grid-template-columns: 40vh auto 50vh;
+}
+
+/* -----> SECCION - BLOG */
+/* -----> BANNER */
+.BannerMainIncio {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/* -----> SECCION - BLOG */
+#blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  border-bottom: 1px solid cornflowerblue;
+}
+
+.blog-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+.blog-box {
+  width: 350px;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.blog-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-text span {
+  color: #494949;
+  font-size: 0.9rem;
+}
+
+.blog-text .blog-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgb(0, 58, 167);
+}
+
+.blog-text .blog-title:hover {
+  color: rgb(7, 166, 206);
+  transition: all ease 0.3s;
+}/*# sourceMappingURL=style.css.map */
