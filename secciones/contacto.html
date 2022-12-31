@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- ANIMACIONES - CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- BOOSTRAP CND CSS -->
     <link rel="stylesheet" href="../style/style.css"> <!-- CSS NATIVO -->
     <title>Gómez Servicios Inmobiliarios</title>
@@ -25,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./servicios.html">Servicios</a>
@@ -46,7 +47,7 @@
                             <a class="nav-link" href="./blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                            <a class="nav-link active" href="./contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -54,21 +55,39 @@
     </section>
 
     <!--                               CONTACT US                                              -->
-    <section class="contact-section">
-        <div class="contact-form">
-            <h1>Contacte con <span>Nosotros</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam atque, quae expedita, minima molestias minus perferendis laboriosam, quibusdam quis vitae voluptate aliquid molestiae accusantium impedit. Recusandae delectus eius molestiae qui.</p>
-            <form action="">
-                <ipunt type="" placeholder="Tu Nombre" required></ipunt>
-                <ipunt type="email" name="email" id="" placeholder="E-mail" required></ipunt>
-                <ipunt type="" placeholdeer="Write a Subject" required></ipunt>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Mensagge" required></textarea>
-                <input type="submit" name="" value="submit" class="btn-contact-us">
-            </form>
-        </div>
-        
-        <div class="contact-img">
-            <img src="../img/contact-us-img.jpg" alt="Imagen de Buenos Aires, Edificios">
+    <section class="section-contact">
+            <!-- ELEMENTO 1 - IMG  -->
+            <div class="box img-contact">
+            <img class="img-contact-hijo" src="../img/contact-us-img.png" alt="Imagen de Buenos Aires, Edificios">
+            </div>
+            <!-- ELEMENTO 2 - TITULO  -->
+            <h2 class="box titulo-contact">Contacte con <span>Nosotros.</span></h2>
+            <!-- ELEMENTO 4 - FORMULARIO  -->
+            <div class="box form-contact">
+                <form class="form-papa" action="">
+                <!-- BOX 1  -->
+                <p>
+                    <label><span class="general-p-form">Nombre y Apellido:</span></label>
+                    <input type="text" name="fullname">
+                </p>
+                <!-- BOX 2  -->
+                <p>
+                    <label>Email:</label>
+                    <input type="email" name="email">
+                </p>
+                <!-- BOX 3  -->
+                <p>
+                    <label>Mensaje:</label> 
+                    <textarea name="mensaje" rows="3"></textarea>
+                </p>
+                <!-- BOX 4  -->
+                <p>
+                    <button>
+                        Enviar
+                    </button>
+                </p>
+                </div>
+                </form>
         </div>
     </section>
 
@@ -81,29 +100,17 @@
         </div>
         <div class="footerP2">
             <div class="ColumnaFooterColumna1"></div>   <!-- Columna 1 -->
-                <ul class="UL__NavFooter--Modificado">
-                    <li>
-                        <a style="color: white;" href="index.html">Inicio</a>
-                    </li><br>
-                    <li>
-                        <a style="color: white;" href="./secciones/propiedades.html">Propiedades</a>
-                    </li><br>
-                    <li>
-                        <a style="color: white;" href="./secciones/servicios.html">Servicios</a>
-                    </li><br>
-                    <li>
-                        <a style="color: white;" href="./secciones/blog.html">Blog</a>
-                    </li><br>
-                    <li>
-                        <a style="color: white;" href="./secciones/sobrenosotros.html">Sobre nosotros</a>
-                    </li><br>
-                    <li>
-                        <a style="color: white;" href="./secciones/contacto.html">Contacto</a>
-                    </li>
-                </ul>
+                <div class="UL__NavFooter--Modificado">
+                        <a class="secciones-links-footer" href="index.html">Inicio</a><br>
+                        <a class="secciones-links-footer"  href="./secciones/propiedades.html">Propiedades</a><br>
+                        <a class="secciones-links-footer"  href="./secciones/servicios.html">Servicios</a><br>
+                        <a class="secciones-links-footer"  href="./secciones/blog.html">Blog</a><br>
+                        <a class="secciones-links-footer"  href="./secciones/sobrenosotros.html">Sobre nosotros</a><br>
+                        <a class="secciones-links-footer"  href="./contacto.html">Contacto</a>
+                </div>
         </div>
         <div class="footerP3">
-            <div class="ColumnaFooterColumna2"></div>   <!-- Columna 1 -->
+            <div class="ColumnaFooterColumna2"></div>   <!-- Columna 2 -->
             <div class="redesSociales">
                 <img src="../img/whatsapp.png" alt="whatsapp"><br>
                 <img src="../img/twitter.png" alt="twitter"><br>
@@ -112,6 +119,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <!-- PAQUETE DE POOPER Y JAVASCRIPT -->
 </body>
 </html>

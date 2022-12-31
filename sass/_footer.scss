@@ -55,16 +55,24 @@ footer {
     margin-right: 100px;
 }
 
-ul.UL__NavFooter--Modificado {
+div.UL__NavFooter--Modificado {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    list-style-type: none;                      /* HIJO: 2*/  
-    text-decoration: none;
     font-family: 'Alexandria', sans-serif;
-    margin-left: 0px;
+    margin-left: 30px;
 }
 
+.secciones-links-footer {
+    list-style-type: none;                      
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.secciones-links-footer:hover {     /* EFECTO */  
+    color: #60A3D9;
+    transition: all ease 0.3s;
+}
 /* -----> PARTE 3 */
 
 .ColumnaFooterColumna2 {

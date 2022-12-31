@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@600&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /* -----> GENERAL */
 * {
   padding: 0%; /* Reseteo */
@@ -20,45 +21,257 @@ ul, li, a {
   font-size: 14px;
 }
 
-.contact-section {
-  padding: 40px 15%;
-}
-
-.contact-form {
-  background: #F9F9F9;
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
+/* ---------------------------> CONTENEDOR PADRE general - Section*/
+.section-contact {
+  background-color: #D5D0D0;
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh; /* ------------> ALTO DE CAJAS*/
+  width: 100%; /* ------------> ANCHO DE CAJAS*/
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  gap: 6rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 FIlas (-->) */
 }
 
-.contact-form h1 {
+/* ---------------------------> uso de GRID - (PADRES) POSICIONAMIENTO y mas */
+/* IMG - CONTENT */
+.img-contact {
+  grid-column-start: 1; /* (-->) Empieza en la linea 1*/
+  grid-column-end: 3; /* (-->) Termina en la linea 3*/
+  grid-row-start: 1; /* (!) Empieza en la linea 1*/
+  grid-row-end: 7; /* (v) Termina en la linea 3*/
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #F6F6F6;
+  border-radius: 10px 0px 0px 10px;
+}
+
+/* TITULO - CONTENT */
+.titulo-contact {
+  grid-column: 3/5;
+  grid-row: 1/2;
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+  border-radius: 0px 10px 0px 0px;
+}
+
+/* FORMULARIO - CONTENT */
+.form-contact {
+  grid-column: 3/5;
+  grid-row: 2/7;
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+  border-radius: 0px 0px 10px 0px;
+}
+
+/* -------------------------------------------------> ESTILOS DE FORM - INPUTS + TEXTAREA + BUTTOM */
+.form-contact form p {
+  margin: 0;
+  padding: 1em;
+  font-family: "Josefin Sans", sans-serif;
+  color: #60A3D9;
+}
+
+/* GENERAL */
+.form-contact form button,
+.form-contact form input,
+.form-contact form textarea {
+  width: 100%;
+  padding: 0px;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #2B3239;
+  border-bottom: 1px solid #2B3239;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* INPUT - EMAIL - TEXTAREA */
+/* BUTTOM */
+.form-contact form button {
+  background: #60A3D9;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+  border-radius: 50px;
+}
+
+/* BUTTOM */
+.form-contact form button:hover,
+.form-contact form button:focus {
+  background: #CDA6F6;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ---------------------------> IMG - estilo*/
+.img-contact-hijo {
+  height: 100%;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/* ---------------------------> TITULO - estilo*/
+.titulo-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   font-size: 60px;
   color: #2B3239;
   margin-bottom: 10px;
   font-family: "Josefin Sans", sans-serif;
 }
 
-.contact-img {
-  max-width: 100%;
-  width: 720px;
-  height: auto;
-  border-radius: 10px;
+/* ---------------------------> SPAN - "nosotros" */
+.titulo-contact > span {
+  background: linear-gradient(#60A3D9, #BFD7ED);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-animation: text 7s linear infinite;
+          animation: text 7s linear infinite;
 }
 
-.contact-form > h1 > span {
-  color: #60A3D9;
+@-webkit-keyframes text {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(120deg);
+  }
 }
 
-.contact-form p {
+@keyframes text {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(120deg);
+  }
+}
+/* -------------------------------------------------------------------------- > MEDIA QUERYS */
+/* VISTA TABLET- menor a 781px */
+@media screen and (max-width: 992px) {
+  .section-contact {
+    background-color: #D5D0D0;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh; /* ------------> ALTO DE CAJAS*/
+    width: 100%; /* ------------> ANCHO DE CAJAS*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .section-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-contact {
+    border-radius: 10px 10px 0px 0px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .titulo-contact {
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .form-contact {
+    grid-column: 1/2;
+    grid-row: 4/8;
+  }
+}
+/* VISTA CELULAR - menor a 480px */
+@media screen and (max-width: 480px) {
+  .section-contact {
+    background-color: #D5D0D0;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh; /* ------------> ALTO DE CAJAS*/
+    width: 100%; /* ------------> ANCHO DE CAJAS*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .section-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-contact {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .titulo-contact {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .form-contact {
+    grid-column: 1/2;
+    grid-row: 4/8;
+  }
+}
+/* VISTA CELULAR - menor a 413px */
+@media screen and (max-width: 413px) {
+  .section-contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .section-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-contact {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .titulo-contact {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .form-contact {
+    grid-column: 1/2;
+    grid-row: 4/8;
+  }
+  /* TAMAÑO DE IMG - CONTACTO */
+  .img-contact-hijo {
+    width: 300px;
+    height: 300px;
+  }
+}
+/* ------------------> Page error */
+.section-erorr-404 {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: #D5D0D0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-erorr-404 h2 {
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
   color: #2B3239;
-  letter-spacing: 1px;
-  line-height: 26px;
-  font-size: 1.1rem;
-  margin-top: 0%;
 }
 
 /* -----> FOOTER */
@@ -114,14 +327,23 @@ footer {
   margin-right: 100px;
 }
 
-ul.UL__NavFooter--Modificado {
+div.UL__NavFooter--Modificado {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  list-style-type: none; /* HIJO: 2*/
-  text-decoration: none;
   font-family: "Alexandria", sans-serif;
-  margin-left: 0px;
+  margin-left: 30px;
+}
+
+.secciones-links-footer {
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.secciones-links-footer:hover { /* EFECTO */
+  color: #60A3D9;
+  transition: all ease 0.3s;
 }
 
 /* -----> PARTE 3 */
